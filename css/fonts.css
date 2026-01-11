@@ -1,0 +1,471 @@
+/* ===================================
+   폰트랩 AI - 폰트 스타일 정의
+   20가지 창의적인 폰트 스타일
+   =================================== */
+
+/* -----------------------------------
+   1. 네온 글로우 (Neon Glow)
+   카테고리: 레트로
+   ----------------------------------- */
+.font-neon-glow {
+    font-family: 'Black Han Sans', sans-serif;
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff00de,
+        0 0 30px #ff00de,
+        0 0 40px #ff00de,
+        0 0 55px #ff00de,
+        0 0 75px #ff00de;
+}
+
+/* -----------------------------------
+   2. 그라데이션 플로우 (Gradient Flow)
+   카테고리: 아트
+   ----------------------------------- */
+.font-gradient-flow {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #ff6b6b);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s linear infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* -----------------------------------
+   3. 사이버펑크 글리치 (Cyberpunk Glitch)
+   카테고리: 미래적
+   ----------------------------------- */
+.font-glitch {
+    font-family: 'Do Hyeon', sans-serif;
+    position: relative;
+    color: #fff;
+    animation: glitch 1s infinite;
+}
+
+.font-glitch::before,
+.font-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.font-glitch::before {
+    color: #ff00c1;
+    animation: glitch-effect 0.3s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translateX(-2px);
+}
+
+.font-glitch::after {
+    color: #00fff9;
+    animation: glitch-effect 0.3s infinite reverse;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translateX(2px);
+}
+
+@keyframes glitch-effect {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-3px); }
+    40% { transform: translateX(3px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+    100% { transform: translateX(0); }
+}
+
+/* -----------------------------------
+   4. 레트로 선셋 (Retro Sunset)
+   카테고리: 레트로
+   ----------------------------------- */
+.font-retro-sunset {
+    font-family: 'Gugi', cursive;
+    background: linear-gradient(180deg, #ff6a00 0%, #ee0979 50%, #bd00ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+    filter: drop-shadow(2px 2px 0 rgba(238, 9, 121, 0.3));
+}
+
+/* -----------------------------------
+   5. 3D 엠보스 (3D Emboss)
+   카테고리: 3D
+   ----------------------------------- */
+.font-emboss {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    color: #e0e0e0;
+    text-shadow:
+        -1px -1px 1px rgba(255,255,255,0.8),
+        1px 1px 1px rgba(0,0,0,0.3),
+        2px 2px 2px rgba(0,0,0,0.2),
+        3px 3px 3px rgba(0,0,0,0.15);
+}
+
+/* -----------------------------------
+   6. 칠판 분필 (Chalk Board)
+   카테고리: 손글씨
+   ----------------------------------- */
+.font-chalk {
+    font-family: 'Gaegu', cursive;
+    font-weight: 700;
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 2px rgba(255,255,255,0.8);
+    filter: blur(0.3px);
+    letter-spacing: 2px;
+}
+
+[data-theme="dark"] .font-chalk {
+    color: #f0f0f0;
+}
+
+/* -----------------------------------
+   7. 골드 럭셔리 (Gold Luxury)
+   카테고리: 클래식
+   ----------------------------------- */
+.font-gold {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    background: linear-gradient(180deg, #f9d423 0%, #e65c00 25%, #f9d423 50%, #e65c00 75%, #f9d423 100%);
+    background-size: 100% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gold-shine 2s ease infinite;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
+}
+
+@keyframes gold-shine {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 0% 100%; }
+}
+
+/* -----------------------------------
+   8. 만화 팝 (Comic Pop)
+   카테고리: 아트
+   ----------------------------------- */
+.font-comic {
+    font-family: 'Jua', sans-serif;
+    color: #ffeb3b;
+    text-shadow:
+        3px 3px 0 #ff5722,
+        6px 6px 0 #e91e63,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    letter-spacing: 2px;
+}
+
+/* -----------------------------------
+   9. 불타는 텍스트 (Fire Text)
+   카테고리: 아트
+   ----------------------------------- */
+.font-fire {
+    font-family: 'Black Han Sans', sans-serif;
+    color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 -5px 4px #ff3,
+        2px -10px 6px #fd3,
+        -2px -15px 11px #f80,
+        2px -25px 18px #f20;
+    animation: fire-flicker 0.15s infinite alternate;
+}
+
+@keyframes fire-flicker {
+    0% { text-shadow: 0 0 4px #fff, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -25px 18px #f20; }
+    100% { text-shadow: 0 0 4px #fff, 0 -6px 4px #ff3, 2px -12px 6px #fd3, -2px -17px 11px #f80, 2px -27px 18px #f20; }
+}
+
+/* -----------------------------------
+   10. 얼음 크리스탈 (Ice Crystal)
+   카테고리: 아트
+   ----------------------------------- */
+.font-ice {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(180deg, #e0f7fa 0%, #80deea 30%, #4dd0e1 70%, #00bcd4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(0, 188, 212, 0.3);
+    filter: drop-shadow(0 0 8px rgba(77, 208, 225, 0.5));
+}
+
+/* -----------------------------------
+   11. 홀로그램 (Holographic)
+   카테고리: 미래적
+   ----------------------------------- */
+.font-hologram {
+    font-family: 'Do Hyeon', sans-serif;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: hologram-shift 3s ease infinite;
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.5));
+}
+
+@keyframes hologram-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* -----------------------------------
+   12. 빈티지 신문 (Vintage Newspaper)
+   카테고리: 클래식
+   ----------------------------------- */
+.font-newspaper {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+    color: #2c2c2c;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+    letter-spacing: -1px;
+    filter: contrast(1.1);
+}
+
+[data-theme="dark"] .font-newspaper {
+    color: #d4d4d4;
+}
+
+/* -----------------------------------
+   13. 타자기 (Typewriter)
+   카테고리: 클래식
+   ----------------------------------- */
+.font-typewriter {
+    font-family: 'Poor Story', cursive;
+    color: #333;
+    text-shadow:
+        1px 1px 0 rgba(0,0,0,0.2),
+        0 0 1px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+[data-theme="dark"] .font-typewriter {
+    color: #ccc;
+}
+
+/* -----------------------------------
+   14. 스텐실 (Stencil)
+   카테고리: 모던
+   ----------------------------------- */
+.font-stencil {
+    font-family: 'Black Han Sans', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text-primary);
+    letter-spacing: 4px;
+}
+
+/* -----------------------------------
+   15. 레인보우 섀도우 (Rainbow Shadow)
+   카테고리: 아트
+   ----------------------------------- */
+.font-rainbow-shadow {
+    font-family: 'Jua', sans-serif;
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #ff0000,
+        2px 2px 0 #ff7700,
+        3px 3px 0 #ffdd00,
+        4px 4px 0 #00ff00,
+        5px 5px 0 #0077ff,
+        6px 6px 0 #7700ff,
+        7px 7px 0 #ff00ff;
+}
+
+/* -----------------------------------
+   16. 우아한 세리프 (Elegant Serif)
+   카테고리: 클래식
+   ----------------------------------- */
+.font-elegant-serif {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+/* -----------------------------------
+   17. 미니멀 산스 (Minimal Sans)
+   카테고리: 모던
+   ----------------------------------- */
+.font-minimal-sans {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    color: var(--text-primary);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* -----------------------------------
+   18. 붓글씨 (Brush Script)
+   카테고리: 손글씨
+   ----------------------------------- */
+.font-brush {
+    font-family: 'Nanum Brush Script', cursive;
+    color: var(--text-primary);
+    font-size: 1.3em !important;
+}
+
+/* -----------------------------------
+   19. 캘리그라피 (Calligraphy)
+   카테고리: 손글씨
+   ----------------------------------- */
+.font-calligraphy {
+    font-family: 'Nanum Pen Script', cursive;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    font-size: 1.2em !important;
+}
+
+/* -----------------------------------
+   20. 스케치 (Sketchy)
+   카테고리: 손글씨
+   ----------------------------------- */
+.font-sketchy {
+    font-family: 'Hi Melody', cursive;
+    color: var(--text-primary);
+    text-shadow:
+        1px 0 0 var(--text-primary),
+        0 1px 0 var(--text-primary);
+    letter-spacing: 1px;
+}
+
+/* -----------------------------------
+   21. 아케이드 픽셀 (Arcade Pixel)
+   카테고리: 레트로
+   ----------------------------------- */
+.font-arcade {
+    font-family: 'Do Hyeon', sans-serif;
+    color: #00ff00;
+    text-shadow:
+        0 0 5px #00ff00,
+        0 0 10px #00ff00,
+        0 0 15px #00ff00;
+    letter-spacing: 3px;
+}
+
+/* -----------------------------------
+   22. 딥 섀도우 (Deep Shadow)
+   카테고리: 3D
+   ----------------------------------- */
+.font-deep-shadow {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #ccc,
+        2px 2px 0 #c9c9c9,
+        3px 3px 0 #bbb,
+        4px 4px 0 #b9b9b9,
+        5px 5px 0 #aaa,
+        6px 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2);
+}
+
+/* -----------------------------------
+   23. 네온 블루 (Neon Blue)
+   카테고리: 미래적
+   ----------------------------------- */
+.font-neon-blue {
+    font-family: 'Gugi', cursive;
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #00b4ff,
+        0 0 30px #00b4ff,
+        0 0 40px #00b4ff,
+        0 0 55px #00b4ff;
+    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from { filter: brightness(1); }
+    to { filter: brightness(1.2); }
+}
+
+/* -----------------------------------
+   24. 원근감 (Perspective)
+   카테고리: 3D
+   ----------------------------------- */
+.font-perspective {
+    font-family: 'Black Han Sans', sans-serif;
+    color: var(--text-primary);
+    transform: perspective(500px) rotateX(15deg);
+    text-shadow:
+        0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2),
+        0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2);
+}
+
+/* -----------------------------------
+   25. 수채화 (Watercolor)
+   카테고리: 아트
+   ----------------------------------- */
+.font-watercolor {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 50%, #fecfef 50%, #a18cd1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(0.3px);
+}
+
+/* -----------------------------------
+   다크 테마 배경 보정
+   ----------------------------------- */
+[data-theme="dark"] .font-card:has(.font-emboss),
+[data-theme="dark"] .font-card:has(.font-deep-shadow) {
+    background-color: #404040;
+}
+
+[data-theme="dark"] .font-emboss {
+    color: #808080;
+}
+
+[data-theme="dark"] .font-deep-shadow {
+    color: #e0e0e0;
+}
+
+/* 네온 효과용 다크 배경 */
+.font-card:has(.font-neon-glow),
+.font-card:has(.font-neon-blue),
+.font-card:has(.font-arcade),
+.font-card:has(.font-fire),
+.font-card:has(.font-glitch),
+.font-card:has(.font-rainbow-shadow),
+.font-card:has(.font-comic) {
+    background-color: #1a1a2e !important;
+}
+
+.font-card:has(.font-chalk) {
+    background-color: #2d4a3e !important;
+}
